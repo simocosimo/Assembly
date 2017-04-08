@@ -11,10 +11,12 @@ RIS   DB    ?
       MOV BL, DIM
       LEA SI, ARR
       MOV AX, 0
-lab:  ADD AX, [SI]
-      ADD SI, 2   
+lab:  ADD AL, [SI]
+      INC SI  
       LOOP lab
-      IDIV BL
-      MOV RIS, AL
+      IDIV BL      
+      MOV RIS, AL  
+      ;AL = 5, AH = 5 
+      ;(Rispettivamente quoziente e resto)
       .EXIT
       END
