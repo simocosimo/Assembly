@@ -1,0 +1,17 @@
+.model small
+.stack
+.data
+n1  db 10
+n2  db 10h
+n3  db 10b
+res db ?
+
+.code  
+.startup
+MOV AH, n1
+ADD AH, n2
+SUB AH, n3
+MOV res, AH   
+
+.exit
+END
